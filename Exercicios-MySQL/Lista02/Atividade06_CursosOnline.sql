@@ -12,7 +12,7 @@ aula_sincrono bool
 create table tb_curso(
 id bigint auto_increment primary key,
 nome varchar(255),
-nivel int(1),
+nivel int,
 preco decimal(6,2),
 duracao_horas time,
 categoria_id bigint,
