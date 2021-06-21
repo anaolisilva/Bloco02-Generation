@@ -37,7 +37,7 @@ insert into tb_personagem (nome, classe_id, ataque, defesa) values ("Teresa Trel
 select nome, ataque from tb_personagem where ataque > 2000 order by ataque DESC;
 select nome, defesa from tb_personagem where defesa >= 1000 and defesa >= 2000 order by defesa DESC;
 
-select * from tb_personagem where nome like "%c%";
+select * from tb_personagem where nome like "c%";
 
 select tb_personagem.id, tb_personagem.nome, tb_personagem.ataque, tb_personagem.defesa, tb_classe.nome as classe, tb_classe.elemento
 from tb_personagem inner join tb_classe on tb_classe.id = tb_personagem.classe_id;

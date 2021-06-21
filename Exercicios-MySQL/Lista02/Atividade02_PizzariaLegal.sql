@@ -36,7 +36,7 @@ insert into tb_pizza (sabor, preco, categoria_id, disponivel) values ("Banana co
 
 select sabor, preco, disponivel from tb_pizza where preco > 45 order by preco;
 select sabor, preco, disponivel from tb_pizza where preco between 29 and 60 order by preco;
-select sabor, preco, disponivel from tb_pizza where sabor like "%c%";
+select sabor, preco, disponivel from tb_pizza where sabor like "c%";
 
 select tb_pizza.id, tb_pizza.sabor, tb_pizza.preco, tb_pizza.disponivel as disponível, tb_categoria.tipo, tb_categoria.tamanho from tb_pizza inner join tb_categoria 
 on tb_categoria.id = tb_pizza.categoria_id order by disponivel DESC, tb_categoria.id, tb_pizza.preco;
