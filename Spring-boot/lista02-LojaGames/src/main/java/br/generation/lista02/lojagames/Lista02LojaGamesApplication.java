@@ -1,4 +1,4 @@
-package br.generation.projetointegrador.lojagames;
+package br.generation.lista02.lojagames;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

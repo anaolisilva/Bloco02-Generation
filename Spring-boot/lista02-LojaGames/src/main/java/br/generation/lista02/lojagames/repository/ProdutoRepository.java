@@ -1,4 +1,4 @@
-package br.generation.projetointegrador.lojagames.repository;
+package br.generation.lista02.lojagames.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.generation.projetointegrador.lojagames.model.Produto;
+import br.generation.lista02.lojagames.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
