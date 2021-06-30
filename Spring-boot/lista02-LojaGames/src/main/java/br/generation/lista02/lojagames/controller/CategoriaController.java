@@ -28,9 +28,11 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
+	@GetMapping
 	public ResponseEntity<List<Categoria>> findAllCategoria () {
 		return ResponseEntity.ok(categoriaRepository.findAll());
 	}
+		
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Categoria> findByIDCategoria (@PathVariable long id){
@@ -51,19 +53,20 @@ public class CategoriaController {
 	
 	@PutMapping
 	public ResponseEntity<Categoria> alterarCategoria (@RequestBody Categoria categoria) {
-		return ResponseEntity.status(HttpStatus.OK).body(categoriaRepository.save(categoria));
-	} //Para usar o .body nas returns eu tenho obrigatoriamente que usar o .status ao invés do .ok?
+		return ResponseEntity.ok(categoriaRepository.save(categoria));
+	} 
 	
 	
 	@DeleteMapping ("/{id}")
 	public void deleteById (@PathVariable long id) {
-		Optional<Categoria> postagem = categoriaRepository.findById(id);
+		Optional<Categoria> produto = categoriaRepository.findById(id);
 		
-		if (postagem.isPresent()) {
+		if (produto.isPresent()) {
 			categoriaRepository.deleteById(id);
 		} else {
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "O id que você digitou não existe!");
-		} //ResponseStatusException é outra classe, diferente da ResponseEntity? Porque ele também contém HttpStatus. Qual é a relação entre elas?
+		} //ResponseStatusException faz parte da classe de excessões do spring. É possível criarmos uma classe com ele e fazer respostas padrões de erros para serem chamados em outros locais.
+		//Procurar mais sobre esse HttpStatus.
 	}
 	
 
