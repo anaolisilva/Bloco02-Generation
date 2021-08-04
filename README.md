@@ -76,3 +76,9 @@
         </li>
     </ul>
 </div>
+<hr>
+<div align="left"><em>Obrigada pela atenção! Qualquer dúvida, estou à disposição.</em></div>
+<div align="left">
+	<a href="https://www.linkedin.com/in/anaolisilva/" target="_blank"><img width="70px"  src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn: /anaolisilva"</a>
+	<a href="https://github.com/anaolisilva" target="_blank"><img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/github/github-original-wordmark.svg" alt="Github: /anaolisilva"</a>
+</div>
